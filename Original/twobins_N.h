@@ -1,0 +1,53 @@
+  #include <cassert>
+  #include <string>
+  #include "Math/Minimizer.h"
+  #include "Math/Factory.h"
+  #include "Math/Functor.h"
+  #include <stdio.h>   
+  #include <math.h>
+  #include <cmath>
+  #include <stdlib.h>
+  #include <errno.h>
+  #include <algorithm>
+  #include <sys/stat.h>
+  #include <TMinuit.h>
+  #include <TMath.h>
+  #include <TProfile.h>
+  #include <TFile.h>
+  #include <TTree.h>
+  #include <TGraph.h>
+  #include <TGraphPainter.h>
+  #include <TGraphErrors.h>
+  #include <TGraph2DErrors.h>
+  #include <TH2.h>
+  #include <TF2.h>
+  #include "TROOT.h"
+  #include "TCut.h"
+  #include "TTree.h"
+  #include "TStyle.h"
+  #include "TSystem.h"
+  #include "TCanvas.h"
+  #include "Riostream.h"
+  #include "TApplication.h"
+  #include "TException.h"
+  #include "TClass.h"
+  #include "TClassTable.h"
+  #include "TEnv.h"
+  #include "TBrowser.h"
+  #include "TString.h"
+  #include "TObjString.h"
+  #include "TError.h"
+  #include "TF12.h"
+  #include "TVirtualFitter.h"
+  #include "TFitResultPtr.h"
+  #include "TMatrixDSym.h"
+  #include "TMatrixD.h"
+  #include "TMatrix.h"
+  #include "TFitResult.h"
+  #include "TCanvas.h"
+  #include "TLegend.h"
+  #include "TLatex.h"
+
+void twobins_N();
+  Double_t _func_2D(Double_t *x, Double_t *par) ;
+  Double_t _func_2D(Double_t *x, Double_t *par) { return (1-x[0]-x[1])*par[0] + par[1]*x[0] + par[2]*x[1];} 
